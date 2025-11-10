@@ -6,43 +6,34 @@
 }
 
 body {
-    /* ЗМІНЕНО: Вирівнюємо вміст горизонтально */
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
     background-color: #fff;
-    padding: 20px; /* Додаємо зовнішній відступ */
+    padding: 20px; 
 }
 
-/* НОВИЙ КОНТЕЙНЕР ДЛЯ ОБОХ ЕКРАНІВ */
 .app-container {
-    display: flex; /* Розміщуємо екрани в ряд */
-    /* Обмежуємо ширину, щоб екрани не були занадто широкими */
+    display: flex; 
     max-width: 800px;
     width: 100%;
-    /* Дозволяємо прокрутку, якщо екрани не поміщаються */
     overflow-x: auto;
-    gap: 40px; /* Відступ між екранами */
+    gap: 40px; 
 }
 
-/* КОЖЕН ОКРЕМИЙ ЕКРАН */
 .onboarding-screen {
-    /* Встановлюємо фіксовану ширину, щоб імітувати мобільний екран */
     width: 360px;
-    flex-shrink: 0; /* Щоб екрани не стискалися */
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Імітуємо висоту мобільного екрана */
     min-height: 700px;
-    padding-bottom: 120px; /* Відступ для фіксованого нижнього блоку */
-    /* Додаємо легку тінь навколо кожного екрана для ефекту "телефону" */
+    padding-bottom: 120px; 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
 }
 
-/* 1. ІЛЮСТРАЦІЯ */
 .illustration-container {
     flex-shrink: 0;
     display: flex;
@@ -58,7 +49,6 @@ body {
     height: auto;
 }
 
-/* 2. КОНТЕНТ ТА КНОПКА MEET NEW PEOPLE */
 .content {
     text-align: center;
     max-width: 350px;
@@ -88,11 +78,10 @@ body {
     margin: 0 auto;
 }
 
-/* 3. ФІКСОВАНА НИЖНЯ СЕКЦІЯ ДЛЯ КОЖНОГО ЕКРАНА */
 .buttons-container-fixed {
     width: 100%;
-    max-width: 360px; /* Обмежуємо шириною екрана */
-    position: absolute; /* ЗМІНЕНО на absolute, щоб він був фіксований всередині .onboarding-screen */
+    max-width: 360px;
+    position: absolute; 
     bottom: 0;
     background-color: #fff;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
@@ -130,7 +119,6 @@ body {
     border-radius: 2px;
 }
 
-/* 4. СТИЛІ КНОПОК SKIP/NEXT */
 .btn {
     text-align: center;
     padding: 15px 0;
@@ -160,8 +148,6 @@ body {
     opacity: 0.9;
 }
 
-/* Додаємо position: relative до батьківського елемента, щоб absolute працював коректно */
 .onboarding-screen {
-    position: relative; /* ВАЖЛИВО! */
-    /* ... (інші стилі) ... */
+    position: relative;
 }
